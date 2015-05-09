@@ -29,6 +29,19 @@ field_id INTEGER NOT NULL,
 response_name TEXT,
 field_name TEXT,
 FOREIGN KEY (field_id) REFERENCES field(field_id)
+FOREIGN KEY (item_id) REFERENCES item(item_id)
+);
+
+CREATE TABLE item (
+item_id SERIAL PRIMARY KEY NOT NULL
+);
+
+CREATE TABLE response (
+response_id SERIAL PRIMARY KEY NOT NULL ,
+field_id INTEGER NOT NULL,
+response_name TEXT,
+field_name TEXT,
+FOREIGN KEY (field_id) REFERENCES field(field_id)
 );
 
 - Now run the Play application using Activator.
