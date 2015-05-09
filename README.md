@@ -31,6 +31,5 @@ field_name TEXT,
 FOREIGN KEY (field_id) REFERENCES field(field_id)
 );
 
-- Now run the Play application using Activator:
-activator run
+- Now run the Play application using Activator.
 The application should now be accessible at http://localhost:9000
