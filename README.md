@@ -3,6 +3,7 @@ Application is designed to collect some data from users.
 
 1.Install PostgreSQL
 http://www.postgresql.org/
+
 2. Create a database called db_data_collection_service.
 SQL script path: /conf/default/1.sql
 Or:
