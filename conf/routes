@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+GET           /                         controllers.Application.main(any = "none")
+
+GET           /views/fieldsList         controllers.Application.fieldsList()
+GET           /field                    controllers.ControllerDC.getAllFields()
+
+GET           /views/fieldEdit          controllers.Application.fieldEdit()
+POST          /field/:id                controllers.ControllerDC.updateField(id: Integer)
+GET           /field/:id                controllers.ControllerDC.getFieldById(id: Integer)
+
+GET           /views/fieldCreate        controllers.Application.fieldCreate()
+POST          /field                    controllers.ControllerDC.saveField()
+
+DELETE        /field/:id                controllers.ControllerDC.deleteField(id: Integer)
+
+GET           /views/responsesList      controllers.Application.responsesList()
+GET           /response                 controllers.ControllerDC.getAllResponses()
+
+
+GET           /assets/*file             controllers.Assets.at(path="/public", file)
+
+GET           /*any                     controllers.Application.main(any)

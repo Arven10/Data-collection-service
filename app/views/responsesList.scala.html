@@ -1,0 +1,31 @@
+@()
+@index("Data collection service") {
+    <div class="row">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-default" data-ng-click="fieldsList()">Fields</button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-default" data-ng-click="addResponse()">Add Response</button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="active">
+                        <td data-ng-repeat="response in responses">{{response.fieldName}}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="response in responses">
+                        <td>{{response.responseName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

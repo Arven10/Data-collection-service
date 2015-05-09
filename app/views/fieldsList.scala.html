@@ -1,0 +1,54 @@
+@()
+@index("Data collection service") {
+    <div class="row">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-default" data-ng-click="responsesList()">Responses</button>
+        </div>
+    </div>
+    <br/>
+
+<div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-default" data-ng-click="addField()">Add Field</button>
+    </div>
+</div>
+<br/>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered">
+
+            <thead>
+                <tr class="active">
+                    <td>Label</td>
+                    <td>Type</td>
+                    <td>Required</td>
+                    <td>Is Active</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="field in fields">
+                    <td>{{field.label}}</td>
+                    <td>{{field.type}}</td>
+                    <td>
+                        <input type="checkbox" data-ng-model="field.required" data-ng-true-value="true" data-ng-false-value="false" class="disabled">
+                    </td>
+                    <td>
+                        <input type="checkbox" data-ng-model="field.active" data-ng-true-value="true" data-ng-false-value="false" class="disabled">
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-default" data-ng-click="editField(field)">
+                                Edit</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-default" data-ng-click="delField(field)">
+                                Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+}
